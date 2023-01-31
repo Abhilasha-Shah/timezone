@@ -22,3 +22,12 @@ function datetimeastimezone_theme($existing, $type, $theme, $path) {
     ],
   ];
 }
+
+/**
+ * Implements hook_page_attachments().
+ */
+
+function datetimeastimezone_page_attachments(array &$attachments) {
+  
+  $attachments['#attached']['library'][] = 'datetimeastimezone/datetime.zone';
+}

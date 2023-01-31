@@ -1,11 +1,18 @@
-<div>
-      <b>
-      {{ datetime|raw }}
-       </b>
+<div class="timer">
+      <strong>
+       {% set datetime = datetime|raw|split('-') %}
+        <div class="displaytime">{{ datetime[1]|date('g:i A')|lower }}</div>
+   
+       {% set datetime = datetime|raw|split('-') %}
+       {{ datetime[0]|date('l, j F Y') }}
       <br />
-      {{ city|raw }}
-      <br />
-       {{ timezone|raw }} 
-        <br />
-       {{ country|raw }}  
+       {% set timezone = timezone|raw|split('/') %}
+       {% set timezone1 = timezone[1]|split('_') %}
+       {% if  timezone1[1] != '' %}
+            {% set zone = timezone1[0]|first ~ '' ~ timezone1[1]|first %} 
+       {% else %}
+            {% set zone = timezone1[0]|slice(0, 3)|upper %} 
+       {% endif %}     
+      Time in  {{ city|raw }}, {{ zone }}, {{ country|raw }}
+      </strong>
 </div>
