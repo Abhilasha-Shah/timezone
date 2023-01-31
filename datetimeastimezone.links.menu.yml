@@ -1,0 +1,6 @@
+datetimeastimezone.settings_form:
+  title: 'TimeZone Configurations'
+  description: 'Configure date and time as per timezone.'
+  parent: system.admin_config_system
+  route_name: datetimeastimezone.settings_form
+  weight: 10

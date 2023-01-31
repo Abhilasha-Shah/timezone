@@ -1,0 +1,5 @@
+name: DateTimeasTimeZone
+type: module
+description: This module provides the block to display date and time for selected timezone.
+package: Custom
+core_version_requirement: ^9

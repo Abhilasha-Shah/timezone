@@ -1,0 +1,7 @@
+datetimeastimezone.settings_form:
+  path: '/admin/config/system/timezone-configuration'
+  defaults:
+    _title: 'TimeZone Configurations'
+    _form: 'Drupal\datetimeastimezone\Form\SettingsForm'
+  requirements:
+    _permission: 'administer datetimeastimezone configuration'

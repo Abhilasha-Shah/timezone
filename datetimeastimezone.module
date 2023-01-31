@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for DateTimeasTimeZone module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+
+function datetimeastimezone_theme($existing, $type, $theme, $path) {
+
+  return [
+    'datetime_as_timezone' => [
+      'variables' => [
+        'datetime' => NULL,
+        'country' => NULL,
+        'city' => NULL,
+        'timezone' => NULL,
+      ],
+    ],
+  ];
+}
